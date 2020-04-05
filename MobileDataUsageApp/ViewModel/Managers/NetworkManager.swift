@@ -19,7 +19,6 @@ class NetworkManager: NSObject {
         
 }
 
-
 extension APICalls {
     //MARK:- Makes a GET Request
     /**
@@ -31,24 +30,17 @@ extension APICalls {
        func getRequestPath(url:String, parameters:[String:AnyObject]?, completionBlock:@escaping ApiCompletionBlock) {
      
         Alamofire.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers:nil)
-            .responseJSON { [weak self] (response) -> Void in
+            .responseJSON {(response) -> Void in
                 
-                guard let weakSelf = self else {
-                    return
-                }
-                
-                if let statusCode = response.response?.statusCode {
-                        switch (response.result){
-                        case .success(_):
+                switch (response.result){
+                    case .success(_):
                             /* to check versonError in result*/
                             completionBlock(response.data as AnyObject?, nil)
-                        case .failure(let error):
+                    case .failure(let error):
                             completionBlock(nil, error as NSError? )
-                        }
-                
-                } else {
-                        completionBlock(nil, response.error as NSError? )
                 }
+                
+               
         }
     }
 

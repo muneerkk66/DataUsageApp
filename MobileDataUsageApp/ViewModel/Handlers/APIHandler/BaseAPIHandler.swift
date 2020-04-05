@@ -12,8 +12,4 @@ class BaseAPIHandler: NSObject {
     internal typealias ApiCompletionBlock = (_ responseObject : AnyObject?, _ errorObject : NSError?) -> ()
     internal var networkManager : NetworkManager = NetworkManager()
 
-    //MARK: - initializers
-    override init(){
-    }
-
 }

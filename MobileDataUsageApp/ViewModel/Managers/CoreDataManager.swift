@@ -19,7 +19,11 @@ class CoreDataManager: NSObject {
     override init() {
         
     }
+    //MARK:- Core Data’s default configuration provides you with a single managed object associated with the main queue. To refresh a managed object context is an in-memory scratchpad you can use when working with your managed objects.
     
+    //MARK:- Traditionally, you could run the data exporting onto a background queue, but Core Data managed object contexts are not thread safe. You cannot dispatch the operation to a background queue and use the same Core Data Stack.
+    
+    //MARK: - Background Context
     lazy var backgroundMasterContext : NSManagedObjectContext? = { [unowned self] in
         if let coordinator = self.persistentStoreCoordinator {
             var context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
@@ -28,7 +32,7 @@ class CoreDataManager: NSObject {
         }
         return nil
     }()
-    
+    //MARK: - Main Context
     lazy var mainContext : NSManagedObjectContext! = { [unowned self] in
         if let coordinator = self.persistentStoreCoordinator {
             var context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
@@ -65,8 +69,6 @@ class CoreDataManager: NSObject {
     }()
     
     lazy var persistentStoreCoordinator : NSPersistentStoreCoordinator! = { [unowned self] in
-        
-        
         
         if let model = self.managedObjectModel {
             var persistentCord : NSPersistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
@@ -113,7 +115,7 @@ class CoreDataManager: NSObject {
         }
         
     }
-    
+    //MARK: - Clear DB
     func clearCoreDataStore() {
         let entities = managedObjectModel.entities
         backgroundMasterContext?.performAndWait {
@@ -150,13 +152,13 @@ class CoreDataManager: NSObject {
     var storeUrl : URL! {
         get {
             let documentsDir = FileManager.default.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).last! as URL
-            return documentsDir.appendingPathComponent("MobileDataUsageApp.sqlite")
+            return documentsDir.appendingPathComponent("DataUsageApp.sqlite")
         }
     }
     
     var modelUrl : URL! {
         get {
-            return Bundle.main.url(forResource: "MobileDataUsageApp", withExtension: "momd")
+            return Bundle.main.url(forResource: "DataUsageApp", withExtension: "momd")
         }
     }
 }

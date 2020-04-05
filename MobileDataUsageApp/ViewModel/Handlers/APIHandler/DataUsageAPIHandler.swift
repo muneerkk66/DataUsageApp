@@ -8,5 +8,18 @@
 
 import Foundation
 class DataUsageAPIHandler:BaseAPIHandler{
-    
+
+    func fetchDataUsage(_ onCompletion:@escaping ApiCompletionBlock) {
+        guard var components = URLComponents(string:networkManager.baseURL + AppConstants.APIUrls.dataUsage.rawValue) else {
+            return
+        }
+        let queryItem = URLQueryItem(name: AppConstants.URLQUERY.resource_id.rawValue,value: AppConstants.resourceID)
+        components.queryItems = [queryItem]
+        guard  let urlpath = components.string else {
+            return
+        }
+        networkManager.getRequestPath(url: urlpath, parameters: nil) {(responseObject, errorObject) -> () in
+            onCompletion(responseObject, errorObject)
+        }
+    }
 }
