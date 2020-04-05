@@ -1,16 +1,24 @@
 PODS:
   - Alamofire (4.9.1)
+  - FittedSheets (1.4.5)
+  - MBProgressHUD (1.2.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.9.0)
+  - Alamofire (~> 4.4)
+  - FittedSheets
+  - MBProgressHUD (~> 1.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - FittedSheets
+    - MBProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  FittedSheets: 7f754c9f6fb4ea330cbc57c652b594255f2a6819
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
 
-PODFILE CHECKSUM: edae4461d410858cd81333829bdf2af84a4a98dc
+PODFILE CHECKSUM: 9bf0f3ebf9a009bade2ed704cae3581b8ab15dfd
 
 COCOAPODS: 1.5.2

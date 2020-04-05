@@ -10,9 +10,11 @@
 		55366894AADE821AD8DFAB77 /* Pods_MobileDataUsageAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D3C24CC2F05A30523FA17E /* Pods_MobileDataUsageAppTests.framework */; };
 		A33D412916F07BE13D538634 /* Pods_MobileDataUsageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010BE3B8A4D10F26FB50C222 /* Pods_MobileDataUsageApp.framework */; };
 		B1672EAACB5E3F0876979373 /* Pods_MobileDataUsageAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C277AE367B3256698ACF4AF7 /* Pods_MobileDataUsageAppUITests.framework */; };
+		E410E0AD243A210800AEDD48 /* DataUsageQuarterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410E0AC243A210700AEDD48 /* DataUsageQuarterVC.swift */; };
+		E410E0B1243A2B3600AEDD48 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410E0B0243A2B3600AEDD48 /* BaseVC.swift */; };
 		E44656382437B64E00E67F2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656372437B64E00E67F2D /* AppDelegate.swift */; };
 		E446563A2437B64E00E67F2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656392437B64E00E67F2D /* SceneDelegate.swift */; };
-		E446563C2437B64E00E67F2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446563B2437B64E00E67F2D /* ViewController.swift */; };
+		E446563C2437B64E00E67F2D /* DataUsageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446563B2437B64E00E67F2D /* DataUsageVC.swift */; };
 		E446563F2437B64E00E67F2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E446563D2437B64E00E67F2D /* Main.storyboard */; };
 		E44656412437B65000E67F2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44656402437B65000E67F2D /* Assets.xcassets */; };
 		E44656442437B65000E67F2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44656422437B65000E67F2D /* LaunchScreen.storyboard */; };
@@ -20,7 +22,6 @@
 		E446565A2437B65000E67F2D /* MobileDataUsageAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656592437B65000E67F2D /* MobileDataUsageAppUITests.swift */; };
 		E446566E2437C00D00E67F2D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446566D2437C00D00E67F2D /* NetworkManager.swift */; };
 		E44656702437C56F00E67F2D /* DataUsageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446566F2437C56F00E67F2D /* DataUsageVM.swift */; };
-		E44656722437C58F00E67F2D /* DataListVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656712437C58F00E67F2D /* DataListVCViewController.swift */; };
 		E44656792437CDD500E67F2D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656782437CDD500E67F2D /* CoreDataManager.swift */; };
 		E446567B2437CE6500E67F2D /* DataUsageDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446567A2437CE6500E67F2D /* DataUsageDataHandler.swift */; };
 		E446567D2437CEAB00E67F2D /* DataUsageAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446567C2437CEAB00E67F2D /* DataUsageAPIHandler.swift */; };
@@ -28,6 +29,13 @@
 		E44656812437CF8C00E67F2D /* BaseAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656802437CF8C00E67F2D /* BaseAPIHandler.swift */; };
 		E44656832437D0E400E67F2D /* BaseDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656822437D0E400E67F2D /* BaseDataHandler.swift */; };
 		E44656852437D1E300E67F2D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656842437D1E300E67F2D /* AppConstants.swift */; };
+		E446568824387BD000E67F2D /* DataUsageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446568624387BD000E67F2D /* DataUsageTableViewCell.swift */; };
+		E446568924387BD000E67F2D /* DataUsageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E446568724387BD000E67F2D /* DataUsageTableViewCell.xib */; };
+		E446568C2438883400E67F2D /* DataUsageApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E446568A2438883400E67F2D /* DataUsageApp.xcdatamodeld */; };
+		E4465692243892CD00E67F2D /* DataUsageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4465691243892CD00E67F2D /* DataUsageResponse.swift */; };
+		E44656A82438DA2E00E67F2D /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656A72438DA2E00E67F2D /* AppExtensions.swift */; };
+		E44656AF2438FCED00E67F2D /* DataUsage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656AD2438FCED00E67F2D /* DataUsage+CoreDataClass.swift */; };
+		E44656B02438FCED00E67F2D /* DataUsage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656AE2438FCED00E67F2D /* DataUsage+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +65,12 @@
 		A0F4E2FEF213404C27C2D3FE /* Pods-MobileDataUsageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataUsageApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileDataUsageApp/Pods-MobileDataUsageApp.release.xcconfig"; sourceTree = "<group>"; };
 		C277AE367B3256698ACF4AF7 /* Pods_MobileDataUsageAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileDataUsageAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E097F468B94374662D82FC69 /* Pods-MobileDataUsageAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataUsageAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileDataUsageAppUITests/Pods-MobileDataUsageAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E410E0AC243A210700AEDD48 /* DataUsageQuarterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUsageQuarterVC.swift; sourceTree = "<group>"; };
+		E410E0B0243A2B3600AEDD48 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		E44656342437B64E00E67F2D /* MobileDataUsageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDataUsageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44656372437B64E00E67F2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E44656392437B64E00E67F2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E446563B2437B64E00E67F2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E446563B2437B64E00E67F2D /* DataUsageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUsageVC.swift; sourceTree = "<group>"; };
 		E446563E2437B64E00E67F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E44656402437B65000E67F2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E44656432437B65000E67F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,7 +83,6 @@
 		E446565B2437B65000E67F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E446566D2437C00D00E67F2D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E446566F2437C56F00E67F2D /* DataUsageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUsageVM.swift; sourceTree = "<group>"; };
-		E44656712437C58F00E67F2D /* DataListVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListVCViewController.swift; sourceTree = "<group>"; };
 		E44656782437CDD500E67F2D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E446567A2437CE6500E67F2D /* DataUsageDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUsageDataHandler.swift; sourceTree = "<group>"; };
 		E446567C2437CEAB00E67F2D /* DataUsageAPIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUsageAPIHandler.swift; sourceTree = "<group>"; };
@@ -81,6 +90,13 @@
 		E44656802437CF8C00E67F2D /* BaseAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIHandler.swift; sourceTree = "<group>"; };
 		E44656822437D0E400E67F2D /* BaseDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataHandler.swift; sourceTree = "<group>"; };
 		E44656842437D1E300E67F2D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		E446568624387BD000E67F2D /* DataUsageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUsageTableViewCell.swift; sourceTree = "<group>"; };
+		E446568724387BD000E67F2D /* DataUsageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataUsageTableViewCell.xib; sourceTree = "<group>"; };
+		E446568B2438883400E67F2D /* DataUsageApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataUsageApp.xcdatamodel; sourceTree = "<group>"; };
+		E4465691243892CD00E67F2D /* DataUsageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUsageResponse.swift; sourceTree = "<group>"; };
+		E44656A72438DA2E00E67F2D /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
+		E44656AD2438FCED00E67F2D /* DataUsage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataUsage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E44656AE2438FCED00E67F2D /* DataUsage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataUsage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +182,6 @@
 				E44656692437B77600E67F2D /* Utilities */,
 				E44656372437B64E00E67F2D /* AppDelegate.swift */,
 				E44656392437B64E00E67F2D /* SceneDelegate.swift */,
-				E446563B2437B64E00E67F2D /* ViewController.swift */,
 				E446563D2437B64E00E67F2D /* Main.storyboard */,
 				E44656402437B65000E67F2D /* Assets.xcassets */,
 				E44656422437B65000E67F2D /* LaunchScreen.storyboard */,
@@ -206,7 +221,9 @@
 		E44656682437B76300E67F2D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E44656712437C58F00E67F2D /* DataListVCViewController.swift */,
+				E410E0AC243A210700AEDD48 /* DataUsageQuarterVC.swift */,
+				E446563B2437B64E00E67F2D /* DataUsageVC.swift */,
+				E410E0B0243A2B3600AEDD48 /* BaseVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -215,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				E44656842437D1E300E67F2D /* AppConstants.swift */,
+				E44656A72438DA2E00E67F2D /* AppExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -222,6 +240,10 @@
 		E446566B2437B7E400E67F2D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E44656AD2438FCED00E67F2D /* DataUsage+CoreDataClass.swift */,
+				E44656AE2438FCED00E67F2D /* DataUsage+CoreDataProperties.swift */,
+				E446568A2438883400E67F2D /* DataUsageApp.xcdatamodeld */,
+				E4465691243892CD00E67F2D /* DataUsageResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,6 +251,8 @@
 		E446566C2437B7F700E67F2D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E446568624387BD000E67F2D /* DataUsageTableViewCell.swift */,
+				E446568724387BD000E67F2D /* DataUsageTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -387,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E44656442437B65000E67F2D /* LaunchScreen.storyboard in Resources */,
+				E446568924387BD000E67F2D /* DataUsageTableViewCell.xib in Resources */,
 				E44656412437B65000E67F2D /* Assets.xcassets in Resources */,
 				E446563F2437B64E00E67F2D /* Main.storyboard in Resources */,
 			);
@@ -435,10 +460,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MobileDataUsageApp/Pods-MobileDataUsageApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FittedSheets/FittedSheets.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FittedSheets.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -489,18 +518,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E446566E2437C00D00E67F2D /* NetworkManager.swift in Sources */,
-				E446563C2437B64E00E67F2D /* ViewController.swift in Sources */,
+				E446563C2437B64E00E67F2D /* DataUsageVC.swift in Sources */,
 				E44656702437C56F00E67F2D /* DataUsageVM.swift in Sources */,
+				E44656B02438FCED00E67F2D /* DataUsage+CoreDataProperties.swift in Sources */,
 				E44656382437B64E00E67F2D /* AppDelegate.swift in Sources */,
 				E446567B2437CE6500E67F2D /* DataUsageDataHandler.swift in Sources */,
+				E4465692243892CD00E67F2D /* DataUsageResponse.swift in Sources */,
 				E446567D2437CEAB00E67F2D /* DataUsageAPIHandler.swift in Sources */,
 				E446563A2437B64E00E67F2D /* SceneDelegate.swift in Sources */,
 				E44656832437D0E400E67F2D /* BaseDataHandler.swift in Sources */,
 				E44656792437CDD500E67F2D /* CoreDataManager.swift in Sources */,
+				E44656AF2438FCED00E67F2D /* DataUsage+CoreDataClass.swift in Sources */,
+				E446568C2438883400E67F2D /* DataUsageApp.xcdatamodeld in Sources */,
 				E44656812437CF8C00E67F2D /* BaseAPIHandler.swift in Sources */,
+				E44656A82438DA2E00E67F2D /* AppExtensions.swift in Sources */,
+				E410E0AD243A210800AEDD48 /* DataUsageQuarterVC.swift in Sources */,
 				E44656852437D1E300E67F2D /* AppConstants.swift in Sources */,
-				E44656722437C58F00E67F2D /* DataListVCViewController.swift in Sources */,
 				E446567F2437CF1C00E67F2D /* BaseVM.swift in Sources */,
+				E446568824387BD000E67F2D /* DataUsageTableViewCell.swift in Sources */,
+				E410E0B1243A2B3600AEDD48 /* BaseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,6 +865,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E446568A2438883400E67F2D /* DataUsageApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E446568B2438883400E67F2D /* DataUsageApp.xcdatamodel */,
+			);
+			currentVersion = E446568B2438883400E67F2D /* DataUsageApp.xcdatamodel */;
+			path = DataUsageApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E446562C2437B64E00E67F2D /* Project object */;
 }
