@@ -1,8 +1,8 @@
 #  DataMobileUsageApp -  Singapore's mobile networks usage list from 2008 to 2018 App is written in Swift
 
 ## Features
-** List of available Mobile Data Usage from Data.gov.sg
-** Display Singapore’s mobile networks from 2008 to 2018.
+ List of available Mobile Data Usage from Data.gov.sg
+ Display Singapore’s mobile networks from 2008 to 2018.
 
 ## Requirements
 
@@ -40,8 +40,9 @@ This is the common class to save model to the Coredata. This also handle multipl
 
 ### ThirdParties
 1. Alamorfire
-2.FittedSheet
-all the license are mentioned in the Utilities/AppLicense.txt file
+2. FittedSheet
+
+   all the license are mentioned in the Utilities/AppLicense.txt file
 
    
      
@@ -49,4 +50,4 @@ all the license are mentioned in the Utilities/AppLicense.txt file
 ## How To Install
 1. Go to project directory
 2. install pod using cocopod App or terminal command
-3.Open project Workspace then run the code.
+3. Open project Workspace then run the code
