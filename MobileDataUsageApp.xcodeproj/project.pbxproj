@@ -16,6 +16,7 @@
 		E410E0BA243AD8DA00AEDD48 /* BaseVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410E0B9243AD8DA00AEDD48 /* BaseVCTests.swift */; };
 		E410E0BC243AEAAC00AEDD48 /* DataUsageQuarterVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410E0BB243AEAAC00AEDD48 /* DataUsageQuarterVCTests.swift */; };
 		E410E0C0243B143B00AEDD48 /* MockAPIResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E410E0BF243B143B00AEDD48 /* MockAPIResponse.json */; };
+		E410E0C2243B1E8B00AEDD48 /* AppLicense.text in Resources */ = {isa = PBXBuildFile; fileRef = E410E0C1243B1E8B00AEDD48 /* AppLicense.text */; };
 		E44656382437B64E00E67F2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656372437B64E00E67F2D /* AppDelegate.swift */; };
 		E446563A2437B64E00E67F2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656392437B64E00E67F2D /* SceneDelegate.swift */; };
 		E446563C2437B64E00E67F2D /* DataUsageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446563B2437B64E00E67F2D /* DataUsageVC.swift */; };
@@ -75,6 +76,7 @@
 		E410E0B9243AD8DA00AEDD48 /* BaseVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCTests.swift; sourceTree = "<group>"; };
 		E410E0BB243AEAAC00AEDD48 /* DataUsageQuarterVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUsageQuarterVCTests.swift; sourceTree = "<group>"; };
 		E410E0BF243B143B00AEDD48 /* MockAPIResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockAPIResponse.json; sourceTree = "<group>"; };
+		E410E0C1243B1E8B00AEDD48 /* AppLicense.text */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AppLicense.text; sourceTree = "<group>"; };
 		E44656342437B64E00E67F2D /* MobileDataUsageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDataUsageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44656372437B64E00E67F2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E44656392437B64E00E67F2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			children = (
 				E44656842437D1E300E67F2D /* AppConstants.swift */,
 				E44656A72438DA2E00E67F2D /* AppExtensions.swift */,
+				E410E0C1243B1E8B00AEDD48 /* AppLicense.text */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E410E0C2243B1E8B00AEDD48 /* AppLicense.text in Resources */,
 				E44656442437B65000E67F2D /* LaunchScreen.storyboard in Resources */,
 				E446568924387BD000E67F2D /* DataUsageTableViewCell.xib in Resources */,
 				E44656412437B65000E67F2D /* Assets.xcassets in Resources */,
@@ -474,13 +478,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MobileDataUsageApp/Pods-MobileDataUsageApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FittedSheets/FittedSheets.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FittedSheets.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

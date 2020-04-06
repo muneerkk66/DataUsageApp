@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "03F85773419E6D720F4D13DD128175A3"
+               BlueprintIdentifier = "F478A811A931221EBC53F36577B0E894"
                BuildableName = "Pods_MobileDataUsageApp.framework"
                BlueprintName = "Pods-MobileDataUsageApp"
                ReferencedContainer = "container:Pods.xcodeproj">
