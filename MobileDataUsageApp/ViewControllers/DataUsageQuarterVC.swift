@@ -22,7 +22,7 @@ class DataUsageQuarterVC: BaseVC {
 
     }
     fileprivate func registerNibs() {
-        dataUsageQuarterTableView.register(UINib(nibName: AppConstants.NibNames.DatatUsageNib.rawValue, bundle: Bundle.main), forCellReuseIdentifier: AppConstants.TableViewCellIdentifier.DatatUsageCellID.rawValue)
+        dataUsageQuarterTableView.register(UINib(nibName: AppConstants.NibNames.datatUsageNib.rawValue, bundle: Bundle.main), forCellReuseIdentifier: AppConstants.TableViewCellIdentifier.datatUsageCellID.rawValue)
     }
     
 }
@@ -30,16 +30,16 @@ class DataUsageQuarterVC: BaseVC {
 extension DataUsageQuarterVCTableViewMethods: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants.TableViewCellIdentifier.DatatUsageCellID.rawValue,
+        let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants.TableViewCellIdentifier.datatUsageCellID.rawValue,
                                                  for: indexPath) as! DataUsageTableViewCell
         
-        let mobileData = (dataUsageVM.selectedDataUsage.quarter?[indexPath.row])!
+        let mobileData = (dataUsageVM.selectedDataUsage?.quarter?[indexPath.row])!
         cell.setMobiledataUsageQuarterValue(mobileData)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count =  dataUsageVM.selectedDataUsage.quarter?.count else {
+        guard let count =  dataUsageVM.selectedDataUsage?.quarter?.count else {
             return 0
         }
         return  count

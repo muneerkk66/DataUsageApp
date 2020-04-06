@@ -11,7 +11,7 @@ class DataUsageVM:BaseVM {
     var apiHandler:DataUsageAPIHandler = DataUsageAPIHandler()
     var dataHandler:DataUsageDataHandler = DataUsageDataHandler()
     var dataUsageList = [MobileDataUsage]()
-    var selectedDataUsage = MobileDataUsage()
+    var selectedDataUsage : MobileDataUsage?
     
     func fetchDataUsage(_ onCompletion:@escaping VMCompletionBlock) {
 

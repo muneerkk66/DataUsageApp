@@ -108,20 +108,5 @@ class DataUsageDataHandler:BaseDataHandler {
             fatalError("Failed to fetch: \(error)")
         }
     }
-    //MARK:- Fetch Year From "YEAR-Q1" string
-    fileprivate func getYearFrom(_ name:String) -> String? {
-        guard let year = name.split(regex: "-").first else {
-            return nil
-        }
-        return year
-    }
-    
-    //MARK:- Fetch Quarter From "YEAR-Q1" string
-    fileprivate func getQuarterNameFrom(_ name:String) -> String? {
-        guard let quarter = name.split(regex: "-").last else {
-            return nil
-        }
-        return quarter
-    }
     
 }

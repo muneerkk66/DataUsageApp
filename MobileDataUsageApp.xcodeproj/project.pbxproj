@@ -12,13 +12,17 @@
 		B1672EAACB5E3F0876979373 /* Pods_MobileDataUsageAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C277AE367B3256698ACF4AF7 /* Pods_MobileDataUsageAppUITests.framework */; };
 		E410E0AD243A210800AEDD48 /* DataUsageQuarterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410E0AC243A210700AEDD48 /* DataUsageQuarterVC.swift */; };
 		E410E0B1243A2B3600AEDD48 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410E0B0243A2B3600AEDD48 /* BaseVC.swift */; };
+		E410E0B3243A4E7600AEDD48 /* MobileDataUsageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410E0B2243A4E7600AEDD48 /* MobileDataUsageMock.swift */; };
+		E410E0BA243AD8DA00AEDD48 /* BaseVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410E0B9243AD8DA00AEDD48 /* BaseVCTests.swift */; };
+		E410E0BC243AEAAC00AEDD48 /* DataUsageQuarterVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410E0BB243AEAAC00AEDD48 /* DataUsageQuarterVCTests.swift */; };
+		E410E0C0243B143B00AEDD48 /* MockAPIResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E410E0BF243B143B00AEDD48 /* MockAPIResponse.json */; };
 		E44656382437B64E00E67F2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656372437B64E00E67F2D /* AppDelegate.swift */; };
 		E446563A2437B64E00E67F2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656392437B64E00E67F2D /* SceneDelegate.swift */; };
 		E446563C2437B64E00E67F2D /* DataUsageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446563B2437B64E00E67F2D /* DataUsageVC.swift */; };
 		E446563F2437B64E00E67F2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E446563D2437B64E00E67F2D /* Main.storyboard */; };
 		E44656412437B65000E67F2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44656402437B65000E67F2D /* Assets.xcassets */; };
 		E44656442437B65000E67F2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44656422437B65000E67F2D /* LaunchScreen.storyboard */; };
-		E446564F2437B65000E67F2D /* MobileDataUsageAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446564E2437B65000E67F2D /* MobileDataUsageAppTests.swift */; };
+		E446564F2437B65000E67F2D /* DataUsageVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446564E2437B65000E67F2D /* DataUsageVCTests.swift */; };
 		E446565A2437B65000E67F2D /* MobileDataUsageAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656592437B65000E67F2D /* MobileDataUsageAppUITests.swift */; };
 		E446566E2437C00D00E67F2D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446566D2437C00D00E67F2D /* NetworkManager.swift */; };
 		E44656702437C56F00E67F2D /* DataUsageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446566F2437C56F00E67F2D /* DataUsageVM.swift */; };
@@ -67,6 +71,10 @@
 		E097F468B94374662D82FC69 /* Pods-MobileDataUsageAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDataUsageAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileDataUsageAppUITests/Pods-MobileDataUsageAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E410E0AC243A210700AEDD48 /* DataUsageQuarterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUsageQuarterVC.swift; sourceTree = "<group>"; };
 		E410E0B0243A2B3600AEDD48 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		E410E0B2243A4E7600AEDD48 /* MobileDataUsageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageMock.swift; sourceTree = "<group>"; };
+		E410E0B9243AD8DA00AEDD48 /* BaseVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCTests.swift; sourceTree = "<group>"; };
+		E410E0BB243AEAAC00AEDD48 /* DataUsageQuarterVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUsageQuarterVCTests.swift; sourceTree = "<group>"; };
+		E410E0BF243B143B00AEDD48 /* MockAPIResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockAPIResponse.json; sourceTree = "<group>"; };
 		E44656342437B64E00E67F2D /* MobileDataUsageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDataUsageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44656372437B64E00E67F2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E44656392437B64E00E67F2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +84,7 @@
 		E44656432437B65000E67F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E44656452437B65000E67F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E446564A2437B65000E67F2D /* MobileDataUsageAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileDataUsageAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E446564E2437B65000E67F2D /* MobileDataUsageAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageAppTests.swift; sourceTree = "<group>"; };
+		E446564E2437B65000E67F2D /* DataUsageVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUsageVCTests.swift; sourceTree = "<group>"; };
 		E44656502437B65000E67F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E44656552437B65000E67F2D /* MobileDataUsageAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileDataUsageAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44656592437B65000E67F2D /* MobileDataUsageAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageAppUITests.swift; sourceTree = "<group>"; };
@@ -193,8 +201,12 @@
 		E446564D2437B65000E67F2D /* MobileDataUsageAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				E446564E2437B65000E67F2D /* MobileDataUsageAppTests.swift */,
+				E410E0BF243B143B00AEDD48 /* MockAPIResponse.json */,
+				E446564E2437B65000E67F2D /* DataUsageVCTests.swift */,
 				E44656502437B65000E67F2D /* Info.plist */,
+				E410E0B2243A4E7600AEDD48 /* MobileDataUsageMock.swift */,
+				E410E0B9243AD8DA00AEDD48 /* BaseVCTests.swift */,
+				E410E0BB243AEAAC00AEDD48 /* DataUsageQuarterVCTests.swift */,
 			);
 			path = MobileDataUsageAppTests;
 			sourceTree = "<group>";
@@ -421,6 +433,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E410E0C0243B143B00AEDD48 /* MockAPIResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,7 +557,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E446564F2437B65000E67F2D /* MobileDataUsageAppTests.swift in Sources */,
+				E410E0B3243A4E7600AEDD48 /* MobileDataUsageMock.swift in Sources */,
+				E446564F2437B65000E67F2D /* DataUsageVCTests.swift in Sources */,
+				E410E0BA243AD8DA00AEDD48 /* BaseVCTests.swift in Sources */,
+				E410E0BC243AEAAC00AEDD48 /* DataUsageQuarterVCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
+let keyWindow = UIApplication.shared.connectedScenes.filter({$0.activationState == .foregroundActive}).map({$0 as? UIWindowScene}).compactMap({$0}).first?.windows.filter({$0.isKeyWindow}).first
 class AppConstants: NSObject {
     
     //MARK:- URL & API details
@@ -36,20 +37,28 @@ class AppConstants: NSObject {
 
     // MARK: NibNames -
        enum NibNames:String {
-           case DatatUsageNib              = "DataUsageTableViewCell"
+           case datatUsageNib              = "DataUsageTableViewCell"
        }
        // MARK: TableViewCellIdentifier -
        enum TableViewCellIdentifier:String {
-           case DatatUsageCellID           = "DatatUsageCellID"
+           case datatUsageCellID           = "DatatUsageCellID"
        }
        // MARK: StoryboardIdentifier -
        enum StoryboardIdentifier: String {
            case quarterVC                  = "quarterVCID"
+           case dataUsageVC                = "dataUsageVCID"
            
        }
        // MARK: Storyboard -
        enum StoryboardName: String {
            case main                       = "Main"
        }
+    
+       // MARK: Acce -
+          enum AccessibilityIdentifier: String {
+              case dataUsagetableView              = "table--datausageTableView"
+              case upArrowImage                    = "image--up"
+              case downArrowImage                  = "image--down"
+          }
    
 }

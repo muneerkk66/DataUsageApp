@@ -28,9 +28,10 @@ class DataUsageVC: BaseVC {
 
     }
     fileprivate func registerNibs() {
-        dataUsageLisTableView.register(UINib(nibName: AppConstants.NibNames.DatatUsageNib.rawValue, bundle: Bundle.main), forCellReuseIdentifier: AppConstants.TableViewCellIdentifier.DatatUsageCellID.rawValue)
+        dataUsageLisTableView.register(UINib(nibName: AppConstants.NibNames.datatUsageNib.rawValue, bundle: Bundle.main), forCellReuseIdentifier: AppConstants.TableViewCellIdentifier.datatUsageCellID.rawValue)
+        dataUsageLisTableView.accessibilityIdentifier = AppConstants.AccessibilityIdentifier.dataUsagetableView.rawValue
     }
-    fileprivate func loadDataUsage() {
+    func loadDataUsage() {
 
         dataUsageVM.fetchDataUsage({ [weak self](error) -> () in
             guard let weakSelf = self else {
@@ -46,11 +47,11 @@ class DataUsageVC: BaseVC {
         
     }
     //MARK:- This will load the Mobile data usage list from Coredata
-    fileprivate func showLoadedDataUsage() {
+    func showLoadedDataUsage() {
         dataUsageVM.dataUsageList = dataUsageVM.loadDataUsageList() ?? []
         dataUsageLisTableView.reloadData()
     }
-    fileprivate func navigateQuarterValueVC() {
+    func navigateQuarterValueVC() {
            
         let onboardingStoryboard : UIStoryboard = UIStoryboard(name:AppConstants.StoryboardName.main.rawValue, bundle: Bundle.main)
         let quarterVC  = onboardingStoryboard.instantiateViewController(withIdentifier: AppConstants.StoryboardIdentifier.quarterVC.rawValue) as! DataUsageQuarterVC
@@ -65,7 +66,7 @@ class DataUsageVC: BaseVC {
 extension DataUsageVCTableViewMethods: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants.TableViewCellIdentifier.DatatUsageCellID.rawValue,
+        let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants.TableViewCellIdentifier.datatUsageCellID.rawValue,
                                                  for: indexPath) as! DataUsageTableViewCell
         let mobileData = dataUsageVM.dataUsageList[indexPath.row]
         cell.setMobiledataUsageValue(mobileData)

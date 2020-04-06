@@ -23,17 +23,20 @@ class DataUsageTableViewCell: UITableViewCell {
     }
     func setMobiledataUsageValue(_ data:MobileDataUsage) {
         imageview.isHidden = false
-        self.yearLabel.text = "\(data.year)"
+        self.yearLabel.text = "\(data.year!)"
         self.mobileDataLabel.text = "\(data.mobileData!.truncate(to:AppConstants.decimalLength))"
         if data.hasDecremented {
             imageview.image = #imageLiteral(resourceName: "down-arrow")
+            imageview.accessibilityIdentifier = AppConstants.AccessibilityIdentifier.downArrowImage.rawValue
         } else {
             imageview.image = #imageLiteral(resourceName: "up-arrow")
+            imageview.accessibilityIdentifier = AppConstants.AccessibilityIdentifier.upArrowImage.rawValue
         }
         
     }
     func setMobiledataUsageQuarterValue(_ data:DataUsage) {
-        self.yearLabel.text = "\(data.quarter)"
+        
+        self.yearLabel.text = "\(data.quarter!)"
         self.mobileDataLabel.text = "\(data.mobileData.truncate(to:AppConstants.decimalLength))"
     }
     

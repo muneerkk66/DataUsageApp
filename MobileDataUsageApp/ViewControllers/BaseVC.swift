@@ -17,11 +17,13 @@ class BaseVC: UIViewController {
     
     func showAlert(_ title: String? =  nil,
                    _ message: String? = nil){
-        DispatchQueue.main.async { [weak self]() -> Void in
+        DispatchQueue.main.async {
             let alert = UIAlertController(title: title,
                                           message: message,
                                           preferredStyle: UIAlertController.Style.alert)
-            self?.present(alert, animated: true, completion: nil)
+            let okButton = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okButton)
+            keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
         }
     }
 
