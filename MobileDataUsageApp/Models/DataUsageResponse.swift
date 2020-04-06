@@ -7,27 +7,31 @@
 //
 
 import Foundation
-struct DataUsageResponse:Codable {
-    var uniqueID:Int
-    var mobileData:String
-    var quarter:String
+struct DataUsageResponse: Codable {
+    var uniqueID: Int
+    var mobileData: String
+    var quarter: String
 
-    //MARK: Codingkey Swift will automatically use this as the key type. This therefore allows you to easily customise the keys that your properties are encoded/decoded with.
+    // MARK: Codingkey Swift will automatically use this as the key type. This therefore allows you to easily customise the keys that your properties are encoded/decoded with.
+
     enum CodingKeys: String, CodingKey {
-         case quarter
-         case uniqueID      = "_id"
-         case mobileData    = "volume_of_mobile_data"
+        case quarter
+        case uniqueID = "_id"
+        case mobileData = "volume_of_mobile_data"
     }
 }
-struct DataUsageAPIResponse:Codable {
-    var result:Records
+
+struct DataUsageAPIResponse: Codable {
+    var result: Records
 }
-struct Records:Codable {
-    var records:[DataUsageResponse]
+
+struct Records: Codable {
+    var records: [DataUsageResponse]
 }
+
 struct MobileDataUsage {
-    var year:Int?
-    var mobileData:Double?
-    var quarter:[DataUsage]?
-    var hasDecremented:Bool = false
+    var year: Int?
+    var mobileData: Double?
+    var quarter: [DataUsage]?
+    var hasDecremented: Bool = false
 }

@@ -8,7 +8,8 @@
 
 import Foundation
 class BaseDataHandler: NSObject {
-    //MARK: - Common completetionblock for DataHandler classes
-    internal typealias DataHandlerCompletionBlock = (_ errorObject : NSError?) -> ()
+    // MARK: - Common completetionblock for DataHandler classes
+
+    internal typealias DataHandlerCompletionBlock = (_ errorObject: NSError?) -> Void
     var coreDataManager = CoreDataManager.sharedDataManager
 }

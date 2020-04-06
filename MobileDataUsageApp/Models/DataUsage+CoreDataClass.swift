@@ -7,10 +7,7 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-public class DataUsage: NSManagedObject {
-
-}
+public class DataUsage: NSManagedObject {}

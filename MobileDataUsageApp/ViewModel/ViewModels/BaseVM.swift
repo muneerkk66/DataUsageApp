@@ -8,7 +8,8 @@
 
 import Foundation
 class BaseVM: NSObject {
-    //MARK: - Common completetionblock for VM classes
-    internal typealias VMDataCompletionBlock = (_ responseObject : Any?, _ errorObject : NSError?) -> ()
-    internal typealias VMCompletionBlock = (_ errorObject : Error?) -> ()
+    // MARK: - Common completetionblock for VM classes
+
+    internal typealias VMDataCompletionBlock = (_ responseObject: Any?, _ errorObject: NSError?) -> Void
+    internal typealias VMCompletionBlock = (_ errorObject: Error?) -> Void
 }

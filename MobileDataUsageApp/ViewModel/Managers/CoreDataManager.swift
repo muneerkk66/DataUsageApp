@@ -6,25 +6,24 @@
 //  Copyright © 2020 Muneer. All rights reserved.
 //
 
+import CoreData
 import Foundation
 import UIKit
-import CoreData
 
-internal typealias completionBlock = (_ errorObject : NSError?) -> Void
+internal typealias completionBlock = (_ errorObject: NSError?) -> Void
 
 class CoreDataManager: NSObject {
-    
     static let sharedDataManager = CoreDataManager()
-    
-    override init() {
-        
-    }
-    //MARK:- Core Data’s default configuration provides you with a single managed object associated with the main queue. To refresh a managed object context is an in-memory scratchpad you can use when working with your managed objects.
-    
-    //MARK:- Traditionally, you could run the data exporting onto a background queue, but Core Data managed object contexts are not thread safe. You cannot dispatch the operation to a background queue and use the same Core Data Stack.
-    
-    //MARK: - Background Context
-    lazy var backgroundMasterContext : NSManagedObjectContext? = { [unowned self] in
+
+    override init() {}
+
+    // MARK: - Core Data’s default configuration provides you with a single managed object associated with the main queue. To refresh a managed object context is an in-memory scratchpad you can use when working with your managed objects.
+
+    // MARK: - Traditionally, you could run the data exporting onto a background queue, but Core Data managed object contexts are not thread safe. You cannot dispatch the operation to a background queue and use the same Core Data Stack.
+
+    // MARK: - Background Context
+
+    lazy var backgroundMasterContext: NSManagedObjectContext? = { [unowned self] in
         if let coordinator = self.persistentStoreCoordinator {
             var context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
             context.persistentStoreCoordinator = coordinator
@@ -32,8 +31,10 @@ class CoreDataManager: NSObject {
         }
         return nil
     }()
-    //MARK: - Main Context
-    lazy var mainContext : NSManagedObjectContext! = { [unowned self] in
+
+    // MARK: - Main Context
+
+    lazy var mainContext: NSManagedObjectContext! = { [unowned self] in
         if let coordinator = self.persistentStoreCoordinator {
             var context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
             context.parent = self.backgroundMasterContext
@@ -41,87 +42,81 @@ class CoreDataManager: NSObject {
         }
         return nil
     }()
-    
-    
-    func createWriteContext() -> NSManagedObjectContext!  {
+
+    func createWriteContext() -> NSManagedObjectContext! {
         let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-        
+
         if let coordinator = persistentStoreCoordinator {
             if let parentContext = mainContext {
                 context.parent = parentContext
-            }
-            else if let parentContext = backgroundMasterContext {
+            } else if let parentContext = backgroundMasterContext {
                 context.parent = parentContext
-            }
-            else {
+            } else {
                 context.persistentStoreCoordinator = coordinator
             }
             return context
         }
         return nil
     }
-    
-    lazy var managedObjectModel : NSManagedObjectModel! = { [unowned self] in
+
+    lazy var managedObjectModel: NSManagedObjectModel! = { [unowned self] in
         if let modelUrl = self.modelUrl {
             return NSManagedObjectModel(contentsOf: modelUrl)
         }
         return nil
     }()
-    
-    lazy var persistentStoreCoordinator : NSPersistentStoreCoordinator! = { [unowned self] in
-        
+
+    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator! = { [unowned self] in
+
         if let model = self.managedObjectModel {
-            var persistentCord : NSPersistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
+            var persistentCord: NSPersistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
             let migrationOptions = [NSMigratePersistentStoresAutomaticallyOption: false,
-                            NSInferMappingModelAutomaticallyOption: false]
-            var error : NSError?
+                                    NSInferMappingModelAutomaticallyOption: false]
+            var error: NSError?
             do {
                 try persistentCord.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: self.storeUrl, options: migrationOptions)
-                
-            }catch let error as NSError {
+
+            } catch let error as NSError {
                 abort()
             }
             return persistentCord
         }
-        
+
         return nil
     }()
-    
-    
-    func save(_ completion:@escaping completionBlock){
-        
-        let context:NSManagedObjectContext = self.mainContext;
-        
-        if (context.hasChanges) {
-            
-            do{
-                
+
+    func save(_ completion: @escaping completionBlock) {
+        let context: NSManagedObjectContext = mainContext
+
+        if context.hasChanges {
+            do {
                 try context.save()
-                
+
                 if let parentContext = context.parent {
-                    parentContext.perform({ [weak self] () -> Void in
+                    parentContext.perform { [weak self] () -> Void in
                         self?.saveAllWithContext(parentContext, completion: completion)
-                    })
+                    }
                 } else {
                     completion(nil)
                 }
-                
-            }catch let error as NSError {
+
+            } catch let error as NSError {
                 completion(error)
             }
-            
-        }else {
+
+        } else {
             completion(nil)
         }
-        
     }
-    //MARK: - Clear DB
+
+    // MARK: - Clear DB
+
     func clearCoreDataStore() {
         let entities = managedObjectModel.entities
         backgroundMasterContext?.performAndWait {
             for entity in entities {
                 if let entityName = entity.name {
-                    let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest (entityName: entityName)
+                    let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)
                     let deleteReqest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
                     do {
                         try self.backgroundMasterContext?.execute(deleteReqest)
@@ -132,33 +127,29 @@ class CoreDataManager: NSObject {
             }
         }
     }
-    
-    func saveAllWithContext(_ writeContext:NSManagedObjectContext, completion:@escaping completionBlock){
+
+    func saveAllWithContext(_ writeContext: NSManagedObjectContext, completion: @escaping completionBlock) {
         do {
             try writeContext.save()
             if let parentContext = writeContext.parent {
-                parentContext.perform({ [weak self] () -> Void in
+                parentContext.perform { [weak self] () -> Void in
                     self?.saveAllWithContext(parentContext, completion: completion)
-                })
+                }
             } else {
                 completion(nil)
             }
-            
-        }catch  let error as NSError {
+
+        } catch let error as NSError {
             completion(error)
         }
     }
-    
-    var storeUrl : URL! {
-        get {
-            let documentsDir = FileManager.default.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).last! as URL
-            return documentsDir.appendingPathComponent("DataUsageApp.sqlite")
-        }
+
+    var storeUrl: URL! {
+        let documentsDir = FileManager.default.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).last! as URL
+        return documentsDir.appendingPathComponent("DataUsageApp.sqlite")
     }
-    
-    var modelUrl : URL! {
-        get {
-            return Bundle.main.url(forResource: "DataUsageApp", withExtension: "momd")
-        }
+
+    var modelUrl: URL! {
+        return Bundle.main.url(forResource: "DataUsageApp", withExtension: "momd")
     }
 }

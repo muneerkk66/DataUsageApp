@@ -9,14 +9,12 @@
 import UIKit
 
 class BaseVC: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
-    func showAlert(_ title: String? =  nil,
-                   _ message: String? = nil){
+
+    func showAlert(_ title: String? = nil,
+                   _ message: String? = nil) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: title,
                                           message: message,
@@ -26,5 +24,4 @@ class BaseVC: UIViewController {
             keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
         }
     }
-
 }

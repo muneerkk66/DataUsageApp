@@ -7,12 +7,10 @@
 //
 //
 
-import Foundation
 import CoreData
-
+import Foundation
 
 extension DataUsage {
-
     @nonobjc public class func fetchRequest() -> NSFetchRequest<DataUsage> {
         return NSFetchRequest<DataUsage>(entityName: "DataUsage")
     }
@@ -20,5 +18,4 @@ extension DataUsage {
     @NSManaged public var uniqueID: Int16
     @NSManaged public var mobileData: Double
     @NSManaged public var quarter: String?
-
 }

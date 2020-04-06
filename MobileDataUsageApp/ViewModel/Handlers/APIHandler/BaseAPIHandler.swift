@@ -8,8 +8,8 @@
 
 import Foundation
 class BaseAPIHandler: NSObject {
-    //MARK: - Common completetionblock for API classes
-    internal typealias ApiCompletionBlock = (_ responseObject : AnyObject?, _ errorObject : NSError?) -> ()
-    internal var networkManager : NetworkManager = NetworkManager()
+    // MARK: - Common completetionblock for API classes
 
+    internal typealias ApiCompletionBlock = (_ responseObject: AnyObject?, _ errorObject: NSError?) -> Void
+    internal var networkManager: NetworkManager = NetworkManager()
 }
