@@ -5,6 +5,22 @@
 	<key>SchemeUserState</key>
 	<dict/>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>E44656332437B64E00E67F2D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E44656492437B65000E67F2D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E44656542437B65000E67F2D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
