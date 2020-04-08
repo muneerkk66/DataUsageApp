@@ -15,6 +15,10 @@ private typealias APICalls = NetworkManager
 class NetworkManager: NSObject {
     var baseURL = AppConstants.baseURL
     internal typealias ApiCompletionBlock = (_ responseObject: AnyObject?, _ errorObject: NSError?) -> Void
+    private let manager: SessionManager
+    init(manager: SessionManager = SessionManager.default) {
+        self.manager = manager
+    }
 }
 
 extension APICalls {

@@ -41,6 +41,7 @@
 		E44656A82438DA2E00E67F2D /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656A72438DA2E00E67F2D /* AppExtensions.swift */; };
 		E44656AF2438FCED00E67F2D /* DataUsage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656AD2438FCED00E67F2D /* DataUsage+CoreDataClass.swift */; };
 		E44656B02438FCED00E67F2D /* DataUsage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44656AE2438FCED00E67F2D /* DataUsage+CoreDataProperties.swift */; };
+		E454485E243D7B6D00CCD592 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454485D243D7B6D00CCD592 /* NetworkManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		E44656A72438DA2E00E67F2D /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		E44656AD2438FCED00E67F2D /* DataUsage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataUsage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E44656AE2438FCED00E67F2D /* DataUsage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataUsage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E454485D243D7B6D00CCD592 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 				E410E0B2243A4E7600AEDD48 /* MobileDataUsageMock.swift */,
 				E410E0B9243AD8DA00AEDD48 /* BaseVCTests.swift */,
 				E410E0BB243AEAAC00AEDD48 /* DataUsageQuarterVCTests.swift */,
+				E454485D243D7B6D00CCD592 /* NetworkManagerTests.swift */,
 			);
 			path = MobileDataUsageAppTests;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E454485E243D7B6D00CCD592 /* NetworkManagerTests.swift in Sources */,
 				E410E0B3243A4E7600AEDD48 /* MobileDataUsageMock.swift in Sources */,
 				E446564F2437B65000E67F2D /* DataUsageVCTests.swift in Sources */,
 				E410E0BA243AD8DA00AEDD48 /* BaseVCTests.swift in Sources */,
