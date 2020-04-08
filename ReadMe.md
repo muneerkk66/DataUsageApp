@@ -51,3 +51,7 @@ This is the common class to save model to the Coredata. This also handle multipl
 1. Go to project directory
 2. install pod using cocopod App or terminal command
 3. Open project Workspace then run the code
+
+## How To Use
+The first viewcontroller will display the list of mobile data usage
+The down arrow indicates the demonstrates a decrease in volume data and this section is only clickable to see the deatils.
